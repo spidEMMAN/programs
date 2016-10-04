@@ -18,8 +18,8 @@
         system("cls");
 		t:
 		system("cls");		
-		cout << "DESTECH MOBILE LATEST PRODUCTS   "<< endl <<"----------------------------------------------"<<endl;
-		cout<< "APPLE"<<setw(20)<< "SONY"<< setw(20)<<"SAMSUNG"<< endl;
-		cout<<"----------------------------------------------"<<endl;
+			cout << "DESTECH MOBILE LATEST PRODUCTS   "<< endl <<"-----------------------------------------------"<<endl;
+		cout<< "|APPLE"<<setw(20)<< "SONY"<< setw(20)<<"SAMSUNG|"<< endl;
+		cout<<"-----------------------------------------------"<<endl;
 		
 		cout << "WHAT BRAND DO YOU WISH TO EXPLORE: " ;
