@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string>
+#include<unistd.h>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+	cout.setf(ios::fixed);
+	cout.setf(ios::showpoint);
+	cout.precision(2);
+	int j = 500000;
+	for (int x=10;x<1000;x++)
+	{
+		x+14;
+		if(x%2==1)
+		{
+			x+1;
+			system("cls");
+			}
+		usleep(j); 
+        j = (j * 1.0); 
+		cout <<setw(x)<< "/-----\\__"<<endl<<setw(x)<<"|----|--- |"<<endl<<setw(x)<<"-O----O--";
+	
+		
+	}
+}
