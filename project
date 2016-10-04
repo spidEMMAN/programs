@@ -3,14 +3,17 @@
 #include<unistd.h>
 #include<iomanip>
 using namespace std;
+//structure of mobile store
 struct det{
 	char n[50];
 	char ad[50];
+	char cont[50];
 		char mobile[100];
 
 	char mobile2[100];
 	
 };
+//structure for stocks
 struct st{
 	char name[50];
 	char pass[50];
@@ -23,6 +26,8 @@ struct st{
 struct tms{
 	char item[50];
 };
+
+// rocket figure 
 const char rocket[] =
 "           _\n\
           /^\\\n\
@@ -55,11 +60,13 @@ const char rocket2[] =
 void dot()
 {
 	cout << endl<<endl << "*ALL TRANSACTIONS ARE CASH ON DELIVERY *";
+	 cout<<endl << "NOTE: IF ADDRESS OR NUMBER IS WRONG DELIVERY WILL RETURN TO WAREHOUSE";
 	int j = 300000;
-    for (int i = 0; i < 20; i ++) {
+    for (int i = 0; i < 40; i ++) {
         usleep(j); // move faster and faster,
         j = (j * 1.0); // so sleep less each time
-        cout<<". "; // move rocket a line upward
+        
+        cout<<". "; // dot will display continues with pause
     }
 	
 }
@@ -69,7 +76,8 @@ void dot2()
     for (int i = 0; i < 20; i ++) {
         usleep(j); // move faster and faster,
         j = (j * 1.0); // so sleep less each time
-        cout<<". "; // move rocket a line upward
+       
+        cout<<". "; // dot will display continues with pause
     }
 }
 void rock()
@@ -145,10 +153,14 @@ int w=0;
 	system("color c");
         title();
         cout << " WANT TO EXPLORE? "<<endl;
-        cout<<"ENTER CUSTOMER NAME: ";
+        // customer info will be inputed here
+        
+       cout<<"ENTER CUSTOMER NAME: ";
 	gets(detail[w].n);
-	cout << "ENTER DELIVERY ADDRESS: ";
+	cout << "ENTER DELIVERY ADDRESS:  ";
 	gets(detail[w].ad);
+	cout<<"ENTER CONTACT NUMBER: ";
+	gets(detail[w].cont);
         system("pause");
         system("cls");
 		t:
@@ -157,8 +169,10 @@ int w=0;
 		cout<< "APPLE"<<setw(20)<< "SONY"<< setw(20)<<"SAMSUNG"<< endl;
 		cout<<"---------------------------------------------"<<endl;
 		cout << "WHAT BRAND DO YOU WISH TO EXPLORE: " ;
+		// input choice
 		gets(detail[w].mobile);
 		system("cls");
+		//program will verify input , else error will occur
 			if(strcmp(detail[w].mobile,"Apple")==0 ||strcmp(detail[w].mobile,"apple")==0||strcmp(detail[w].mobile,"APPLE")==0)
 			{
 				rt:
@@ -170,10 +184,10 @@ int w=0;
 					system("cls");
 					l:
 					cout << "  YOUR CART  " <<endl<<endl;
-						cout<<detail[w].n << endl<<detail[w].ad << endl; 
-						cout << endl<<detail[w].mobile<<endl<<detail[w].mobile2<<endl;
+						cout<<"NAME: "<<detail[w].n <<"\nADDRESS:  " <<detail[w].ad << endl<<"CONTACT #: "<< detail[w].cont; 
+						cout << endl<<" "<<detail[w].mobile<<endl<<" "<<detail[w].mobile2<<endl;
 			
-				
+				//system validations
 				cout<<endl<< "ARE YOU SURE TO BUY iphone 6s?    "<< "YES/NO"<<endl;
 				gets(gd);
 				p:
@@ -181,6 +195,7 @@ int w=0;
 				{
 				system("cls");		
 					cout << " DELIVERING ON YOUR REGISTERED ADDRESS ";
+					
 					dot();
 					rock();
 					system("cls");
@@ -189,7 +204,7 @@ int w=0;
 				goto x;
 			
 				}
-			 
+			 // optional exit 
 				
 				if(strcmp(gd,"no")==0||strcmp(gd,"NO")==0)
 				{
@@ -207,7 +222,7 @@ int w=0;
 				   	goto x;
 				 }
 				}
-				
+				// if error there is a certain return point
 			else{
 				cout << "ERROR TRY AGAIN *PLEASE CONSIDER YOUR CHARACTER INPUT* " << endl ;
 				   	system("pause");
@@ -227,8 +242,8 @@ int w=0;
 					system("cls");
 					i:
 					cout << "  YOUR CART  " <<endl<<endl;
-					cout<<detail[w].n << endl<<detail[w].ad << endl;				
-						cout << endl<<detail[w].mobile<<endl<<detail[w].mobile2<<endl;
+					cout<<"NAME: "<<detail[w].n<<"\nADDRESS:  " <<detail[w].ad << endl<<"CONTACT #: "<< detail[w].cont; 
+						cout << endl<<" "<<detail[w].mobile<<endl<<" "<<detail[w].mobile2<<endl;
 			
 				
 				cout<<endl<< "ARE YOU SURE TO BUY IPHONE 6S+?    "<< "YES/NO"<<endl;
@@ -283,9 +298,8 @@ int w=0;
 					system("cls");
 					q:
 					cout << "  YOUR CART  " <<endl<<endl;
-					cout<<detail[w].n << endl<<detail[w].ad << endl;	
-						cout << endl<<detail[w].mobile<<endl<<detail[w].mobile2<<endl;
-			
+					cout<<"NAME: "<<detail[w].n <<"\nADDRESS:  " <<detail[w].ad << endl<<"CONTACT #: "<< detail[w].cont; 
+						cout << endl<<" "<<detail[w].mobile<<endl<<" "<<detail[w].mobile2<<endl;
 				
 				cout<<endl<< "ARE YOU SURE TO BUY iphone 7?    "<< "YES/NO"<<endl;
 				gets(gd);
@@ -338,9 +352,8 @@ int w=0;
 					system("cls");
 					u:
 								cout << "  YOUR CART  " <<endl<<endl;
-					cout<<detail[w].n << endl<<detail[w].ad << endl;
-						cout << endl<<detail[w].mobile<<endl<<detail[w].mobile2<<endl;
-			
+					cout<<"NAME: "<<detail[w].n <<"\nADDRESS:  " <<detail[w].ad << endl<<"CONTACT #: "<< detail[w].cont; 
+						cout << endl<<" "<<detail[w].mobile<<endl<<" "<<detail[w].mobile2<<endl;
 				
 				cout<<endl<< "ARE YOU SURE TO BUY XPERIA XA?    "<< "YES/NO"<<endl;
 				gets(gd);
@@ -388,9 +401,8 @@ int w=0;
 					system("cls");
 					qq:
 					cout << "  YOUR CART  " <<endl<<endl;
-					cout<<detail[w].n << endl<<detail[w].ad << endl;
-						cout << endl<<detail[w].mobile<<endl<<detail[w].mobile2<<endl;
-			
+				cout<<"NAME: "<<detail[w].n <<"\nADDRESS:  "<<detail[w].ad << endl<<"CONTACT #: "<< detail[w].cont; 
+						cout << endl<<" "<<detail[w].mobile<<endl<<" "<<detail[w].mobile2<<endl;
 				
 				cout<<endl<< "ARE YOU SURE TO BUY XPERIA X?    "<< "YES/NO"<<endl;
 				gets(gd);
@@ -438,9 +450,8 @@ int w=0;
 					system("cls");
 						r:
 					cout << "  YOUR CART  " <<endl<<endl;
-					cout<<detail[w].n << endl<<detail[w].ad << endl;
-						cout << endl<<detail[w].mobile<<endl<<detail[w].mobile2<<endl;
-			
+				cout<<"NAME: "<<detail[w].n <<"\nADDRESS:  " <<detail[w].ad << endl<<"CONTACT #: "<< detail[w].cont; 
+						cout << endl<<" "<<detail[w].mobile<<endl<<" "<<detail[w].mobile2<<endl;
 				
 				cout<<endl<< "ARE YOU SURE TO BUY XPERIA Z5?    "<< "YES/NO"<<endl;
 				gets(gd);
@@ -495,9 +506,8 @@ int w=0;
 					system("cls");
 					er:
 					cout << "  YOUR CART  " <<endl<<endl;
-					cout<<detail[w].n << endl<<detail[w].ad << endl;
-						cout << endl<<detail[w].mobile<<endl<<detail[w].mobile2<<endl;
-			
+					cout<<"NAME: "<<detail[w].n <<"\nADDRESS:  " <<detail[w].ad << endl<<"CONTACT #: "<< detail[w].cont; 
+						cout << endl<<" "<<detail[w].mobile<<endl<<" "<<detail[w].mobile2<<endl;
 				
 				cout<<endl<< "ARE YOU SURE TO BUY NOTE 7?    "<< "YES/NO"<<endl;
 				gets(gd);
@@ -545,9 +555,8 @@ int w=0;
 					system("cls");
 						we:
 					cout << "  YOUR CART  " <<endl<<endl;
-					cout<<detail[w].n << endl<<detail[w].ad << endl;
-						cout << endl<<detail[w].mobile<<endl<<detail[w].mobile2<<endl;
-			
+				cout<<"NAME: "<<detail[w].n <<"\nADDRESS:  " <<detail[w].ad << endl<<"CONTACT #: "<< detail[w].cont; 
+						cout << endl<<" "<<detail[w].mobile<<endl<<" "<<detail[w].mobile2<<endl;
 				
 				cout<<endl<< "ARE YOU SURE TO BUY S7?    "<< "YES/NO"<<endl;
 				gets(gd);
@@ -595,9 +604,8 @@ int w=0;
 					system("cls");
 				qw:	
 					cout << "  YOUR CART  " <<endl<<endl;
-					cout<<detail[w].n << endl<<detail[w].ad << endl;
-						cout << endl<<detail[w].mobile<<endl<<detail[w].mobile2<<endl;
-			
+				cout<<"NAME: "<<detail[w].n <<"\n\n\nADDRESS:    " <<detail[w].ad << endl<<"CONTACT #: "<< detail[w].cont; 
+						cout << endl<<" "<<detail[w].mobile<<endl<<" "<<detail[w].mobile2<<endl;
 				
 				cout<<endl<< "ARE YOU SURE TO BUY S7 EDGE?    "<< "YES/NO"<<endl;
 				gets(gd);
