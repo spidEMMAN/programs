@@ -1,0 +1,6 @@
+ title();
+        cout << " WANT TO EXPLORE? "<<endl;
+        cout << "ENTER YOUR DELIVERY ADDRESS: ";
+        gets(detail[w].add);
+        system("pause");
+        system("cls");
