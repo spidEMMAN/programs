@@ -343,6 +343,7 @@ int w=0;
 		}
 		if(strcmp(detail[w].mobile,"SONY")==0 ||strcmp(detail[w].mobile,"sony")==0||strcmp(detail[w].mobile,"Sony")==0)
 			{
+				r:
 				cout << "SONY "<<endl<< "XPERIA XA"<<setw(20)<<"XPERIA X"<<setw(20)<<"XPERIA Z5"<<endl<<endl<<"15,000php"<<setw(20)<<"22,500php"<<setw(20)<<"35,800php"<<endl;
 				cout<<endl << "WHAT WOULD YOU WANT TO BUY? "<<endl ;
 				gets(detail[w].mobile2);
@@ -448,7 +449,7 @@ int w=0;
 				if(strcmp(detail[w].mobile2,"Xperia Z5")== 0 ||strcmp(detail[w].mobile2,"xperia Z5")==0||strcmp(detail[w].mobile2,"XPERIA Z5")==0||strcmp(detail[w].mobile2,"Xperia z5")== 0 ||strcmp(detail[w].mobile2,"xperia z5")==0||strcmp(detail[w].mobile2,"XPERIA z5")==0)
 				{
 					system("cls");
-						r:
+					
 					cout << "  YOUR CART  " <<endl<<endl;
 				cout<<"NAME: "<<detail[w].n <<"\nADDRESS:  " <<detail[w].ad << endl<<"CONTACT #: "<< detail[w].cont; 
 						cout << endl<<" "<<detail[w].mobile<<endl<<" "<<detail[w].mobile2<<endl;
