@@ -10,17 +10,17 @@ int main()
 	cout.setf(ios::showpoint);
 	cout.precision(2);
 	int j = 500000;
-	for (int x=10;x<1000;x++)
+	for (int x=10;x<75;x++)
 	{
-		x+14;
-		if(x%2==1)
-		{
-			x+1;
-			system("cls");
-			}
+		x+10;
+	
+		
+		
 		usleep(j); 
-        j = (j * 1.0); 
-		cout <<setw(x)<< "/-----\\__"<<endl<<setw(x)<<"|----|--- |"<<endl<<setw(x)<<"-O----O--";
+        j = (j * 0.9); 
+        	system("cls");
+		cout <<setw(x)<<"_______"<<endl<<setw(x+2)<<"|     |__"<<endl<<setw(x+3)<<"|     |  |"<<endl<<setw(x+3)<<"*O----O--*";
+		system("color b");
 	
 		
 	}
