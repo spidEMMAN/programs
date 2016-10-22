@@ -1,0 +1,30 @@
+#include<iostream>
+#include<unistd.h>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+	cout.setf(ios::fixed);
+	cout.setf(ios::showpoint);
+	cout.precision(2);
+
+	int j=300000;
+	int x;
+	for(x=1; x<15; x++)
+	{
+	
+			
+	
+		
+		system("color b");
+		usleep(j);
+		
+		system("cls");
+
+	cout << ":::   :::   ::::::   :::::   :::::   ::  ::   :::::   :::::   ::   :::::   ::::::   :::   :::   ::   :::::\n::  :  ::   ::       :: ::   :: ::   ::  ::   ::   :: ::   ::   ::      ::     :: :  ::   :: ::   ::\n::     ::";
+	x=0;
+}
+	system("pause");
+	return 0;
+}
