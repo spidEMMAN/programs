@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+#include<unistd.h>
+
+using namespace std;
+
+// Complete the makeAnagram function below.
+
+int main()
+{
+   string a,b ;
+    cin >> a;
+    cin >> b;
+   int x = 0;
+   int y=0;
+   int z=0;
+  
+  for(int n=0;n<a.size();n++)
+  {
+      for(int m=0;m<b.size();m++)
+      {
+         if(a[n] == b[m])
+              {
+                 x +=2;
+              }
+         
+      }
+  }
+  
+  y = a.size() + b.size();
+  
+  z = y - x;
+   
+  cout << abs(z);
+   
+   
+}
