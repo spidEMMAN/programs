@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+/*#include <bits/stdc++.h>
 #include<unistd.h>
 
 using namespace std;
@@ -33,4 +33,52 @@ int main()
   cout << abs(z);
    
    
+}
+*/
+
+
+#include<bits/stdc++.h> 
+using namespace std; 
+const int CHARS = 100; 
+  
+// function to calculate minimum numbers of characters 
+// to be removed to make two strings anagram 
+int remAnagram(string str1, string str2) 
+{ 
+    // make hash array for both string and calculate 
+    // frequency of each character 
+    int count1[CHARS] = {0}, count2[CHARS] = {0}; 
+  
+    // count frequency of each character in first string 
+    for (int i=0; str1[i]!='\0'; i++) 
+        count1[str1[i]-'a']++; 
+  
+    // count frequency of each character in second string 
+    for (int i=0; str2[i]!='\0'; i++) 
+        count2[str2[i]-'a']++; 
+  
+    // traverse count arrays to find number of characters 
+    // to be removed 
+    int result = 0; 
+    for (int i=0; i<100; i++) 
+        result += abs(count1[i] - count2[i]); 
+    return result; 
+} 
+  
+// Driver program to run the case 
+int main() 
+{ 
+
+    string a;
+    getline(cin, a);
+
+    string b;
+    getline(cin, b);
+    int res = remAnagram(a, b);
+
+    cout << res << "\n";
+
+    
+
+    return 0;
 }
